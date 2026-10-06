@@ -2,6 +2,7 @@ services:
   - type: web
     name: zizzet-recovery-engine
     env: python
+    runtime: python-3.10.14
     buildCommand: pip install -r requirements.txt
     startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
     plan: free
